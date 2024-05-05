@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import JobCard from "./JobCardDummy";
+import JobCard from "./JobCard";
 import '../css/secondaryContainer.css'
-import JobCardDummy from "./JobCardDummy";
+import JobCardDummy from "./JobCard";
 import { Grid } from "@mui/material";
 
 
@@ -22,7 +22,9 @@ const SecondaryContainer = () => {
 
                     }}>
                         {jobs?.map((job) => (
-                             <JobCardDummy/>
+                             <JobCardDummy key={job.jdUid} company={job?.companyName} position={job?.jobRole} location={job.location} image={job.logoUrl} description={job?.jobDetailsFromCompany}
+                             salarymin={job?.minJdSalary} salarymax={job?.maxJdSalary} currency={job?.salaryCurrencyCode} minExp={job?.minExp} maxExp={job?.maxExp} link={job?.jdLink}
+                             />
                         ))}
                        
                     </Grid>

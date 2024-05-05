@@ -1,14 +1,15 @@
 
 .funding-info {
-    width: 100% ;
+    width: 100% !important ;
     text-align: center;
     background-color: #bbfcea;
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 13px ;
+    font-size: 13px !important ;
     font-weight: 500;
-    padding: 3px 4px ;
+    padding: 3px 4px  !important;
+    margin-bottom: 0px;
 }
 
 .funding-info-dummy {
@@ -36,12 +37,14 @@
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 .cards-sub-text {
     font-size: 11px;
     font-weight: 500;
     margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 .card-salary{
@@ -65,9 +68,17 @@ img {
 .info-container h2{
     font-size: 14px;
     line-height: 1.5;
+    margin: 0;
+    font-weight: 400;
 }
 .info-container h3{
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    color: #8b8b8b;
+    font-weight: 600;
     margin-top: 0px;
+
 }
 #custom-button{
     text-transform: none;
@@ -78,4 +89,14 @@ img {
 .card-body-grid-parent{
     margin-top: 8px;
     padding: 8px;
+}
+
+.status-container{
+    flex-grow: 1;
+    width: 100%;
+    padding:0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
