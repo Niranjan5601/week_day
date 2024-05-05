@@ -1,5 +1,5 @@
 import useGetJobs from "../hooks/useGetJobs";
-import JobCard from "./JobCard";
+
 import SecondaryContainer from "./SecondaryContainer";
 
 import '../css/body.css'

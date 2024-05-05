@@ -1,0 +1,81 @@
+
+.funding-info {
+    width: 100% ;
+    text-align: center;
+    background-color: #bbfcea;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13px ;
+    font-weight: 500;
+    padding: 3px 4px ;
+}
+
+.funding-info-dummy {
+    opacity: 0;
+    position: relative;
+}
+
+.card{
+    display: flex !important ;
+    flex-direction: column !important ;
+    justify-content: space-between !important;
+    align-items: center;
+    height: 100% !important;
+    position: relative !important ;
+    border-radius: 20px !important;
+    padding: 5px !important;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+.card img {
+    width: 25px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.cards-sub-text {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.card-salary{
+    font-size: 14px !important ;
+    font-weight: 400;
+    margin: 8px 0 !important;
+}
+
+.jd-link-container{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.poc-info-container{
+    margin-top: 10px;
+}
+
+.info-container h2{
+    font-size: 14px;
+    line-height: 1.5;
+}
+.info-container h3{
+    margin-top: 0px;
+}
+#custom-button{
+    text-transform: none;
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+.card-body-grid-parent{
+    margin-top: 8px;
+    padding: 8px;
+}
