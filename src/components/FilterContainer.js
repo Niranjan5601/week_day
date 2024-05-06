@@ -9,11 +9,12 @@ import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 const FilterContainer = () => {
     const jobs = useSelector((store) => store.jobs.jobs?.jdList);
-    // const count = useSelector((store) => store.jobs.jobs.totalCount);
+    const count = useSelector((store) => store.jobs.jobs?.totalCount);
+   
     // console.log(count);
     const [filteredJobs, setFilteredJobs] = useState(jobs);
     const [loadedJobs,setLoadedJobs] = useState(10);
-    const [index,setIndex] = useState(0);
+  
    
   
     const [filters, setFilters] = useState({
@@ -72,7 +73,7 @@ const FilterContainer = () => {
 
 
     const addToFilter = async () => {
-            if(loadedJobs <=947){
+            if(loadedJobs < count){
               if(filteredJobs){
                 setFilteredJobs((prev) => [...prev,...filteredJobs]);
               }
