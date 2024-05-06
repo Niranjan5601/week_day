@@ -11,7 +11,7 @@ const FilterContainer = () => {
     const jobs = useSelector((store) => store.jobs.jobs?.jdList);
     const count = useSelector((store) => store.jobs.jobs?.totalCount);
    
-    // console.log(count);
+   
     const [filteredJobs, setFilteredJobs] = useState(jobs);
     const [loadedJobs,setLoadedJobs] = useState(10);
   
@@ -87,15 +87,13 @@ const FilterContainer = () => {
     },[loadedJobs]);
 
     const handelInfiniteScroll = async () => {
-        // console.log("scrollHeight" + document.documentElement.scrollHeight);
-        // console.log("innerHeight" + window.innerHeight);
-        // console.log("scrollTop" + document.documentElement.scrollTop);
+   
         try {
           if (
             window.innerHeight + document.documentElement.scrollTop + 1 >=
             document.documentElement.scrollHeight
           ) {
-            // setLoading(true);
+            
             setLoadedJobs((prev) => prev + 10);
             console.log(loadedJobs);
           }
@@ -221,9 +219,6 @@ const FilterContainer = () => {
                              salarymin={job?.minJdSalary} salarymax={job?.maxJdSalary} currency={job?.salaryCurrencyCode} minExp={job?.minExp} maxExp={job?.maxExp} link={job?.jdLink}
                              />
                         ))}
-                        
-                       
-                        
 
                     </Grid>:<CircularProgress/>}
         </>

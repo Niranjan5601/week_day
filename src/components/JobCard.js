@@ -81,7 +81,7 @@ const JobCard = ({ company, position, location, salarymin, salarymax, descriptio
                         </Box>
                     </Box>
                 </Box>
-                <CardContent sx={{ width: '100%', flex: '1 1  0%', padding: '8px 16px' }}>
+                <CardContent sx={{  flex: '1 1  0%', padding: '8px 16px' }}>
                     <Box sx={{ display: 'flex', gap: '0.5rem', }}>
                         <Box component={"img"} sx={{
                             height: '2.5rem',
@@ -123,12 +123,6 @@ const JobCard = ({ company, position, location, salarymin, salarymax, descriptio
                                 lineHeight: '1.5',
                                 fontWeight: '500'
                             }}>About Company:</Typography>
-                            <Box sx={{
-                                whiteSpace: 'pre-wrap',
-                                fontSize: '14px',
-                            }}>
-                                {description}
-                            </Box>
                             <Typography sx={{
                                 margin: '0px',
                                 fontSize: '1rem',
@@ -136,7 +130,14 @@ const JobCard = ({ company, position, location, salarymin, salarymax, descriptio
                                 lineHeight: '1.5',
                                 fontWeight: '500'
 
-                            }}>About Role:</Typography>
+                            }}>About Us</Typography>
+                            <Box sx={{
+                                whiteSpace: 'pre-wrap',
+                                fontSize: '14px',
+                            }}>
+                                {description}
+                            </Box>
+                            
                             <Box sx={{
                                 whiteSpace: 'pre-wrap',
                                 fontSize: '14px',

@@ -102,24 +102,24 @@ export const locationOptions=[
     {value:'chennai',label:'Chennai'},
     {value:'bangalore',label:'Bangalore'},
     {value:'hyderabad',label:'Hyderabad'},
-    {value:'delhi',label:'Delhi'},
+    {value:'delhi ncr',label:'Delhi'},
     {value:'mumbai',label:'Mumbai'},
 ];
   export const customStyles = {
         
     control: (provided) => ({
         ...provided,
-        height:50, // increase the height
-        minHeight: 50, // ensure the minimum height is also set
-        padding: '0 8px', // increase the padding
+        height:50, 
+        minHeight: 50, 
+        padding: '0 8px', 
         fontWeight: '300',
       }),
       valueContainer: (provided) => ({
         ...provided,
-        padding: '0 8px', // increase the padding
+        padding: '0 8px',
       }),
       singleValue: (provided) => ({
         ...provided,
-        lineHeight: '36px', // adjust the lineHeight to center the text vertically
+        lineHeight: '36px',
       }),
   };
