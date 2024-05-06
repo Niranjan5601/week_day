@@ -1,0 +1,19 @@
+
+
+.filter-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    padding: 0 20px 20px;
+    background-color: #fff !important;
+}
+
+.filter-container div{
+    margin: 2px 5px 2px 0 !important;
+}
+
+.search-box .MuiInputBase-root{
+height: 49px !important;
+background-color: rgb(255,255,255);
+}

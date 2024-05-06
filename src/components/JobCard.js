@@ -2,7 +2,7 @@ import { Box, Button, Card, CardContent, Grid, Typography } from "@mui/material"
 
 import '../css/jobCard.css'
 
-const JobCardDummy = ({ company, position, location, salarymin, salarymax, description, image, currency, minExp, maxExp,link }) => {
+const JobCard = ({ company, position, location, salarymin, salarymax, description, image, currency, minExp, maxExp,link }) => {
 
     let salaryText;
     let expRequirement;
@@ -104,7 +104,7 @@ const JobCardDummy = ({ company, position, location, salarymin, salarymax, descr
                         Estimated Salary:{
                            salaryText
                         }
-                        <span className="dummy"> ⚠️</span>
+                        <span className="dummy">  ✅</span>
                         <br></br>
                     </Typography>
                     <div className="jd-link-container">
@@ -162,7 +162,7 @@ const JobCardDummy = ({ company, position, location, salarymin, salarymax, descr
                     <div className="info-container poc-info-container">
                         <h3 style={{ marginTop: '10px' }}>Minimum Experience</h3>
                         <h2>
-                            {minExp !== null || maxExp !== null ? `${minExp || '0'} - ${maxExp || 'Present'} years` : "Experience not specified"}
+                            {expRequirement}
                         </h2>
                     </div>
                 </CardContent>
@@ -194,4 +194,4 @@ const JobCardDummy = ({ company, position, location, salarymin, salarymax, descr
 }
 
 
-export default JobCardDummy;
+export default JobCard;
