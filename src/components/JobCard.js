@@ -157,7 +157,7 @@ const JobCard = ({ company, position, location, salarymin, salarymax, descriptio
                             margin: '0px',
                             fontFamily: "'Lexend', sans-serif",
                             lineHeight: '1.5',
-                        }} >Show More</Typography>
+                        }} >View Job</Typography>
                     </Box>
                     <div className="info-container poc-info-container">
                         <h3 style={{ marginTop: '10px' }}>Minimum Experience</h3>

@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 const FilterContainer = () => {
     const jobs = useSelector((store) => store.jobs.jobs?.jdList);
     const [filteredJobs, setFilteredJobs] = useState(jobs);
+    const [loadedJobs,setLoadedJobs] = useState(10);
     const [filters, setFilters] = useState({
         roles: [],
         minExp: null,
@@ -62,11 +63,13 @@ const FilterContainer = () => {
 
             return true;
         });
-        console.log(filteredData);
+        
         setFilteredJobs(filteredData);
     };
     useEffect(() => {
-        applyFilters();
+        if(jobs){
+            applyFilters();
+        }
     }, [jobs, filters]);
 
     const handleChange = (selectedOption, actionMeta) => {
@@ -110,7 +113,7 @@ const FilterContainer = () => {
             case 'searchCompany':
                 setFilters((prevFilters) => ({
                     ...prevFilters,
-                    searchCompany: selectedOption ? selectedOption.value : '',
+                    searchCompany: selectedOption ? selectedOption : '',
                 }));
                 break;
             default:
@@ -157,7 +160,7 @@ const FilterContainer = () => {
                                 borderRadius:'4px',                              
                               }, 
 
-                        }} placeholder='Search Company' onChange={handleChange}  />
+                        }} placeholder='Search Company' onChange={(event) => handleChange(event.target.value, { name: 'searchCompany' })}  />
                 </Box>
             </div>
         </Box>
@@ -170,12 +173,14 @@ const FilterContainer = () => {
                         marginLeft:'-24px',
 
                     }}>
-                        {jobs?.map((job) => (
+                        {filteredJobs?.map((job) => (
                              <JobCard key={job.jdUid} company={job?.companyName} position={job?.jobRole} location={job.location} image={job.logoUrl} description={job?.jobDetailsFromCompany}
                              salarymin={job?.minJdSalary} salarymax={job?.maxJdSalary} currency={job?.salaryCurrencyCode} minExp={job?.minExp} maxExp={job?.maxExp} link={job?.jdLink}
                              />
                         ))}
                        
+                        
+
                     </Grid>
         </>
         
